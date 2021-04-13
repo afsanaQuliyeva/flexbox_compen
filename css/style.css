@@ -1,13 +1,15 @@
 :root {
     --desaturated-red: hsl(0, 36%, 70%);
     --soft-red: hsl(0, 93%, 68%);
-    --Dark-grayish-red: hsl(0, 6%, 24%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
     --gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
     --gradient-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
 
 html {
     box-sizing: border-box;
+    /*font-size: 10px;*/
+    font-size: 62.5%;
 }
 
 *, ::before, ::after {
@@ -16,5 +18,98 @@ html {
 
 body {
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
 }
 
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    flex-basis: 60%;
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.right {
+    flex-basis: 40%;
+    background-image: url('../images/hero-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    text-transform: uppercase;
+    word-spacing: 900000000000px;
+    font-weight: 600;
+    color: var(--dark-grayish-red);
+    font-size: 6rem;
+    letter-spacing: 1rem;
+}
+
+.header-part {
+    color: var(--desaturated-red);
+    font-weight: 300;
+}
+
+.text {
+    color: var(--desaturated-red);
+    line-height: 1.7;
+}
+
+.email {
+    background-color: transparent;
+    border: 1px solid var(--desaturated-red);
+    outline: none;
+    border-radius: 100px;
+    padding: 1rem 1.5rem;
+    color: var(--dark-grayish-red);
+    caret-color: var(--dark-grayish-red);
+    width: 100%;
+    height:4rem;
+}
+
+.email:focus {
+    border: 1px solid var(--soft-red);
+}
+
+.btn {
+    background-image: var(--gradient-2);
+    border: none;
+    outline: none;
+    width: 8rem;
+    height: 4rem;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0 .5rem 1rem var(--desaturated-red);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:active {
+    background-image: none;
+    background-color: var(--desaturated-red);
+    transform: scale(1.1);
+}
+
+form {
+    position: relative;
+}
+
+.logo {
+    align-self: flex-start;
+}
